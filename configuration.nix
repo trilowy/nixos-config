@@ -139,6 +139,11 @@
       spotify
       bambu-studio
       qmk
+      cargo # Rust
+      rustc # Rust
+      rustfmt # Rust
+      clippy # Rust
+      rust-analyzer # Rust
     ];
 
     shellAliases = {
