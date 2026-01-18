@@ -132,6 +132,7 @@
       fd # For neovim
       plocate # For neovim
       zig # Also add gcc for neovim
+      zls # Zig LSP
       haruna
       calibre
       gimp
