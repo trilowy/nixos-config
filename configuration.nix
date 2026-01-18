@@ -134,6 +134,7 @@
       zig # Also add gcc for neovim
       haruna
       calibre
+      gimp
     ];
 
     shellAliases = {
