@@ -138,6 +138,7 @@
       keepass
       spotify
       bambu-studio
+      qmk
     ];
 
     shellAliases = {
