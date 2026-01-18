@@ -96,8 +96,17 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
+  programs = {
+    # Install firefox.
+    firefox.enable = true;
+
+    bash = {
+      shellAliases = {
+        lg = "lazygit";
+        v = "nvim";
+      };
+    };
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
