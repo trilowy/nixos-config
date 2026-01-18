@@ -137,6 +137,7 @@
       gimp
       keepass
       spotify
+      bambu-studio
     ];
 
     shellAliases = {
