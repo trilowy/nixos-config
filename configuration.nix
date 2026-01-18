@@ -96,6 +96,20 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  fonts = {
+    fontDir.enable = true;
+
+    packages = with pkgs; [
+      monaspace # Nerd font with icons
+    ];
+
+    fontconfig = {
+      defaultFonts = {
+        monospace = [ "MonaspaceNeon" ]; # FIXME: does not work on plasma
+      };
+    };
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
