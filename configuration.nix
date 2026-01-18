@@ -96,35 +96,35 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  programs = {
-    # Install firefox.
-    firefox.enable = true;
-
-    bash = {
-      shellAliases = {
-        lg = "lazygit";
-        v = "nvim";
-      };
-    };
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  programs = {
+    # Install firefox.
+    firefox.enable = true;
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    kdePackages.kate
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    git
-    lazygit
-    neovim
-    gnumake # For neovim
-    ripgrep # For neovim
-    fd # For neovim
-    plocate # For neovim
-    zig # Also add gcc for neovim
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      kdePackages.kate
+      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      git
+      lazygit
+      neovim
+      gnumake # For neovim
+      ripgrep # For neovim
+      fd # For neovim
+      plocate # For neovim
+      zig # Also add gcc for neovim
+    ];
+
+    shellAliases = {
+      lg = "lazygit";
+      v = "nvim";
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
