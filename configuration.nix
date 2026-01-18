@@ -145,6 +145,7 @@
       rustfmt # Rust
       clippy # Rust
       rust-analyzer # Rust
+      ghostty
     ];
 
     shellAliases = {
