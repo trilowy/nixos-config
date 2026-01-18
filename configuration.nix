@@ -119,6 +119,7 @@
       plocate # For neovim
       zig # Also add gcc for neovim
       haruna
+      calibre
     ];
 
     shellAliases = {
