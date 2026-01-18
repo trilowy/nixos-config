@@ -118,6 +118,7 @@
       fd # For neovim
       plocate # For neovim
       zig # Also add gcc for neovim
+      haruna
     ];
 
     shellAliases = {
