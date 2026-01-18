@@ -108,6 +108,12 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
     lazygit
+    neovim
+    gnumake # For neovim
+    ripgrep # For neovim
+    fd # For neovim
+    plocate # For neovim
+    zig # Also add gcc for neovim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
