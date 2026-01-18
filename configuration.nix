@@ -135,6 +135,7 @@
       haruna
       calibre
       gimp
+      keepass
     ];
 
     shellAliases = {
