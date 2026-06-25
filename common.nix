@@ -149,12 +149,12 @@
       ohMyZsh = {
         enable = true;
         plugins = [ # https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-          "git"
+          "git" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
           "z" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z
         ];
         theme = "agnoster"; # "af-magic"; # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
       };
-      autosuggestions.enable = true; # Grey autocomplete suggestion
+      autosuggestions.enable = true; # https://github.com/zsh-users/zsh-autosuggestions
     };
   };
 
