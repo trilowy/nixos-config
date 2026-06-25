@@ -36,6 +36,12 @@ Ou depuis le liveUSB :
     ```sh
     sudo nixos-install --flake github:trilowy/nixos-config#valora
     ```
+  - Mettre un mot de passe au user :
+    ```sh
+    nixos-enter
+    passwd trilowy
+    ```
+
 
 ## Autres
 
