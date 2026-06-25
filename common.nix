@@ -159,76 +159,76 @@
   };
 
   # Rootless Docker
-  # virtualisation.docker = {
-  #   # Disable the system wide Docker daemon
-  #   enable = false;
-  #
-  #   rootless = {
-  #     enable = true;
-  #     # Configures the DOCKER_HOST environment variable to point to the rootless Docker instance
-  #     setSocketVariable = true;
-  #   };
-  # };
+  virtualisation.docker = {
+    # Disable the system wide Docker daemon
+    enable = false;
+
+    rootless = {
+      enable = true;
+      # Configures the DOCKER_HOST environment variable to point to the rootless Docker instance
+      setSocketVariable = true;
+    };
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment = {
     systemPackages = with pkgs; [
       kdePackages.kate
-      # kdePackages.kcalc
-      # haruna
-      # calibre
-      # gimp
+      kdePackages.kcalc
+      haruna
+      calibre
+      gimp
       keepassxc
-      # spotify
+      spotify
       # variety # Pretty wallpapers
-      # dig # For nslookup
-      # libreoffice
+      dig # For nslookup
+      libreoffice
       # ergogen
 
       # Dev tools
-      # neovim
+      neovim
       vim
       git
       lazygit
-      # ripgrep # For neovim search projects
-      # fd # For neovim search projects
-      # gnumake # For building neovim plugins
-      # tree-sitter # For neovim
-      # docker-compose
-      # cargo-watch
-      # dbeaver-bin
-      # xclip # Fix neovim/lazygit clipboard for X11
-      # bruno
-      # watchexec
-      # kalamine
-      # hugo # Ergo‑L website
-      # pandoc # Ergo‑L website
+      ripgrep # For neovim search projects
+      fd # For neovim search projects
+      gnumake # For building neovim plugins
+      tree-sitter # For neovim
+      docker-compose
+      cargo-watch
+      dbeaver-bin
+      xclip # Fix neovim/lazygit clipboard for X11
+      bruno
+      watchexec
+      kalamine
+      hugo # Ergo‑L website
+      pandoc # Ergo‑L website
       # freecad
-      # zip
-      # nodejs # For neovim Mason to install prettierd with npm
+      zip
+      nodejs # For neovim Mason to install prettierd with npm
 
       # Languages
-      # zig
-      # cargo # Rust
-      # rustc # Rust
-      # rustfmt # Rust
-      # clippy # Rust
-      # gcc # Add "cc" for Rust proc-macro2
+      zig
+      cargo # Rust
+      rustc # Rust
+      rustfmt # Rust
+      clippy # Rust
+      gcc # Add "cc" for Rust proc-macro2
 
       # LSP
-      # lua-language-server # Lua
-      # rust-analyzer # Rust
-      # zls # Zig
+      lua-language-server # Lua
+      rust-analyzer # Rust
+      zls # Zig
       # jdt-language-server # Java
-      # taplo # TOML
+      taplo # TOML
       # kotlin-lsp # Not in Nix for now
       # superhtml
       # tailwindcss-language-server
 
       # Formatter
       # prettierd # Installed via neovim Mason to have the same as openSUSE WSL
-      # stylua
+      stylua
     ];
   };
 
