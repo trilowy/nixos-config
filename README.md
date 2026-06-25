@@ -1,6 +1,8 @@
 # NixOS
 
-Pour l’installer :
+## Installation
+
+Pour l’installer sur un système existant :
 
 ```sh
 cd /etc
@@ -11,11 +13,31 @@ sudo mv nixos /etc/nixos
 sudo cp nixos_backup/hardware-configuration.nix /etc/nixos
 ```
 
-ou avec flake, directement après une install fraiche de NixOS :
+Ou depuis le liveUSB :
+- Avec GParted :
+  - Créer une partition de 1024 Mo nommée `EFI` en fat32
+  - Créer une partition du restant nommée `root` avec le label `root` en ext4
+  - Valider
+  - Ajouter sur la partition `EFI` les flags `boot` et `esp`
+- Dans un terminal :
+  - Monter la partition `root` sur `/mnt` :
+    ```sh
+    sudo mount /dev/nvme0n1p2 /mnt
+    ```
+  - Monter la partition `EFI` sur `/mnt/boot` :
+    ```sh
+    sudo mount --mkdir /dev/nvme0n1p1 /mnt/boot
+    ```
+  - Reprendre leurs ID et les changer dans la conf `valora-hardware-configuration.nix` :
+    ```sh
+    lsblk -f
+    ```
+  - Installer :
+    ```sh
+    sudo nixos-install --flake github:trilowy/nixos-config#valora
+    ```
 
-```sh
-sudo nixos-install --flake github:trilowy/nixos-config#valora
-```
+## Autres
 
 Pour mettre à jour :
 
