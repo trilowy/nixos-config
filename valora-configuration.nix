@@ -16,8 +16,8 @@
   # services.xserver.libinput.enable = true;
 
   # VirtualBox
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "trilowy" ];
+  # virtualisation.virtualbox.host.enable = true;
+  # users.extraGroups.vboxusers.members = [ "trilowy" ];
   # Fix "VirtualBox can't operate in VMX root mode"
-  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
+  # boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
 }
