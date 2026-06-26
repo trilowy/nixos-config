@@ -26,7 +26,7 @@
   # 3D printing
   environment = {
     systemPackages = with pkgs; [
-      bambu-studio
+      # bambu-studio # FIXME: bambu-studio fails to build in 26.05 but not 25.11
       freecad
     ];
   };
