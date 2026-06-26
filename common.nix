@@ -204,7 +204,6 @@
       kalamine
       hugo # Ergo‑L website
       pandoc # Ergo‑L website
-      # freecad
       zip
       nodejs # For neovim Mason to install prettierd with npm
 
