@@ -108,3 +108,9 @@ Lancer juste un programme en version unstable :
 ```sh
 nix run github:NixOS/nixpkgs/nixpkgs-unstable#neovim
 ```
+
+Lancer un programme dans une ancienne version d’un channel :
+
+```sh
+nix run -I nixpkgs=flake:github/NixOS/nixos-22.11/ nixpkgs#kicad
+```
