@@ -77,6 +77,7 @@
       LC_ADDRESS = "fr_FR.UTF-8";
       LC_IDENTIFICATION = "fr_FR.UTF-8";
       LC_MEASUREMENT = "fr_FR.UTF-8";
+      LC_MESSAGES = "fr_FR.UTF-8";
       LC_MONETARY = "fr_FR.UTF-8";
       LC_NAME = "fr_FR.UTF-8";
       LC_NUMERIC = "fr_FR.UTF-8";
@@ -142,7 +143,15 @@
 
   programs = {
     # Install firefox.
-    firefox.enable = true;
+    firefox = {
+      enable = true;
+
+      languagePacks = [ "fr" ];
+
+      preferences = {
+        "intl.locale.requested" = "fr";
+      };
+    };
 
     zsh = {
       enable = true;
