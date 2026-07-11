@@ -208,7 +208,7 @@
       nodejs # For neovim Mason to install prettierd with npm
 
       # Languages
-      zig
+      zig_0_15
       cargo # Rust
       rustc # Rust
       rustfmt # Rust
@@ -218,7 +218,7 @@
       # LSP
       lua-language-server # Lua
       rust-analyzer # Rust
-      zls # Zig
+      zls_0_15 # Zig
       # jdt-language-server # Java
       taplo # TOML
       # kotlin-lsp # Not in Nix for now
