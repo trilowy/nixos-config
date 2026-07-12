@@ -215,6 +215,7 @@
       pandoc # Ergo‑L website
       zip
       nodejs # For neovim Mason to install prettierd with npm
+      cloc # Count lines of code
 
       # Languages
       zig_0_15
