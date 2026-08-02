@@ -216,6 +216,8 @@
       zip
       nodejs # For neovim Mason to install prettierd with npm
       cloc # Count lines of code
+      direnv # Enter in a project and load nix develop automatically keeping env var set
+      nix-direnv
 
       # Languages
       zig_0_15
