@@ -114,3 +114,15 @@ Lancer un programme dans une ancienne version d’un channel :
 ```sh
 nix run -I nixpkgs=flake:github/NixOS/nixos-22.11/ nixpkgs#kicad
 ```
+
+Dans un projet avec un `flake.nix` :
+
+```sh
+nix develop
+```
+
+Ou pour garder le shell zsh :
+
+```sh
+nix develop --command zsh
+```
