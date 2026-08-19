@@ -185,6 +185,7 @@
     systemPackages = with pkgs; [
       kdePackages.kate
       kdePackages.kcalc
+      kdePackages.filelight # Disk Usage Analyzer (like Baobab)
       haruna
       calibre
       gimp
