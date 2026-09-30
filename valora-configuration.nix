@@ -1,5 +1,6 @@
 {
   inputs,
+  pkgs,
   ...
 }: {
   imports = [
@@ -20,4 +21,14 @@
   # users.extraGroups.vboxusers.members = [ "trilowy" ];
   # Fix "VirtualBox can't operate in VMX root mode"
   # boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
+
+  # Sveltekit dev environment
+  programs.nix-ld.enable = true; # Allow to execute npm programs
+  environment = {
+    systemPackages = with pkgs; [
+      vscode
+      nodejs_26
+      google-chrome
+    ];
+  };
 }
