@@ -29,6 +29,7 @@
       vscode
       nodejs_26
       google-chrome
+      typescript-go # Neovim LSP
     ];
   };
 }
