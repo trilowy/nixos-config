@@ -165,6 +165,9 @@
       };
       autosuggestions.enable = true; # https://github.com/zsh-users/zsh-autosuggestions
     };
+
+    # Allow dynamic linking of lib
+    nix-ld.enable = true;
   };
 
   # Rootless Docker
